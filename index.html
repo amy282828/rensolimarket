@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="es" data-theme="light">
 <head>
+  <link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#1A3DC4">
+
+<link rel="apple-touch-icon" href="icon-192.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>Rensoli Market</title>
@@ -192,6 +197,12 @@ hr.div{border:none;border-top:1.5px solid var(--border);margin:13px 0}
 .fw700{font-weight:700}.text-green{color:var(--green)}.text-red{color:var(--red)}.text-blue{color:var(--blue)}
 </style>
 </head>
+  <script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("./service-worker.js")
+    .then(() => console.log("Service Worker registrado"));
+}
+  </script>
 <body>
 
 <div class="toast" id="toast"></div>
